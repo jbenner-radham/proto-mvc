@@ -1,0 +1,18 @@
+AddDefaultCharset UTF-8
+
+# https://httpd.apache.org/docs/current/mod/mod_rewrite.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Is not a directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Is not a file
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Append to query string (QSA = Query String Append)
+    # Stop the write process (L = Last)
+    # RewriteRule ^(.*)$ index.php?_radham_query=/$1 [QSA,L]
+    RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+</IfModule>

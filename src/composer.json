@@ -1,0 +1,21 @@
+{
+    "name": "radham/mvc-test",
+    "description": "Super duper quick MVC concept test.",
+    "authors": [
+        {
+            "name": "James Benner",
+            "email": "james.benner@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~5.5",
+        "ext-SPL": "~0.2",
+        "michelf/php-markdown": "~1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "lib/"
+        }
+    }
+}
